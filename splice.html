@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <script>
+        var list = {
+            arr: [],
+            index: 0,
+
+            adding_task: function (task) {
+                this.arr.push(task)
+            },
+            printing_list : function(){
+                document.write(this.arr)
+            },
+            removing_task: function () {
+                this.arr.splice(this.index, 1)
+                document.write(this.arr)
+            }
+
+        };
+
+        list.adding_task("task1");
+        list.adding_task("task2");
+        list.adding_task("task3");
+        list.adding_task("task4");
+        list.adding_task("task5");
+    
+        document.write("Main list <br> ");
+        list.printing_list();
+        document.write("<br> list after removing <br> ");
+        list.removing_task(list.index = 2)
+    </script>
+</head>
+
+</html>
+
+
+
