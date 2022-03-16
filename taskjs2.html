@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Banking Application</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+        <style>
+
+            form{
+                margin-top: 200px;
+                padding-bottom: 110px;
+                
+            }
+            
+            .container{
+                border: 2px solid green;
+                border-radius: 4px;
+                margin-top:100px;
+                background-color:#f0faf4;
+            }
+
+            .form-control{
+                width: 500px;
+            }
+
+            .heading{
+                margin-top: 40px;
+            }
+            .part-3{
+                margin: -100px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <script>
+
+            function balance(){
+                var x = document.getElementById("getamount").value;
+                return x;
+            }
+            
+            function createAccount(){
+                let input = document.getElementById('getamount').value;
+                var initial_balance = input;
+
+                if(input == ''){
+                    alert("Please enter valid amount!");
+                }
+                else if(input < 5000)
+                {
+                    alert("Please enter atleast Rs.5000")
+                }
+                else{
+                    alert("Account has been created with balance Rs."+initial_balance);  
+                }
+            
+            }
+
+    
+            function withdrawAmount(){
+
+                var y = balance();
+                var withdraw_amount = document.getElementById('withdrawamount').value;;
+                if(withdraw_amount == ''){
+                    alert("Please enter Valid Amount");
+                }
+                else if(withdraw_amount > y){
+                    alert("Dont have Sufficient balance");
+                }
+            }
+
+            function depositAmount(){
+                var z = balance();
+                var deposite_amount = document.getElementById('depositamount').value;
+                if(deposite_amount == ''){
+                    alert("Please enter Valid Amount");
+                }
+                else{
+                    var total = deposite_amount + z;
+                    alert("Amount has been deposited");
+                }
+
+
+            }
+
+        </script>
+        <div class="container">
+        <center>
+        
+            <h2 class="heading">Bank Application</h2>
+      
+        <form>
+            <div class="part-3">
+                    <input type="number" class="form-control" id="getamount"  placeholder="Enter amount for account creation"><br>
+                    <input type="number" class="form-control" id="withdrawamount" placeholder="Enter withdraw amount"><br>
+                    <input type="number" class="form-control" id="depositamount"  placeholder="Enter deposit amount ">
+                <br><br><br>
+            <button onClick="createAccount(); balance();" class="btn btn-success">Create Account</button>&nbsp;&nbsp;
+            <button onClick="withdrawAmount(); balance();"  class="btn btn-success">Withdraw Amount</button>&nbsp;&nbsp;
+            <button onClick="depositAmount(); balance();"  class="btn btn-success">Deposit Amount</button>
+        </div>
+        </form>
+        </center>
+            </div>
+
+    </body>
+
+
+</html>
