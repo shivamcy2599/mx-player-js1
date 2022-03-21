@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #d8ecf2;
+        }
+        table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+            }
+        th, td {
+            background-color: #96D4D4;
+            }
+    </style>
+	
+    
+    
+	
+	
+
+    
+</head>
+<body>
+
+
+
+    <div class="">
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-cell mdl-cell--4-col">
+            <h1  style = "font-family:georgia;font-size:30px;font-style:bold;" >EMI CALCULATOR</h1>
+            <form>
+                <div>
+                    <label for="amount">Enter Amount</label><br>
+					<input type=number id="amount" >               
+                </div>
+				<div>
+                    <label for="roi">Enter Rate of Interest</label><br>
+					<input type=number id="roi" >               
+                </div>
+				<div>
+                    <label for="tenure">Enter Tenure(In Years)</label><br>
+					<input type=number id="tenure" >               
+                </div>
+                </br>
+                <input class="" type=button onclick=emi.calculatemonth() value="Monthly EMI"><br><br>
+                <input class="" type=button onclick=emi.calculateyear() value="Yearly EMI"><br>
+                </br>
+                <input style="" class="" type=button onclick=emi.calculatetotal() value="Overall EMI">
+            </form>
+        </div>
+    </div>
+   <script src="emi/assets/script.js"></script>
+</body>
+</html>
