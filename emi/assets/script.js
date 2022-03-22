@@ -81,10 +81,7 @@
                 var cols = 0;
 
                 if(arguments[0]=='total'){
-                    //if total , then 3 more arguments present: 
-                    //1. total amount with interest
-                    //2. total interest
-                    //3. principal account
+                    
                     table+='<thead>'
                         table += '<tr>';
                             table+='<th>'+"Principal Amount"+'</th>';  
@@ -104,10 +101,7 @@
                     
                 }
                 else if(arguments[0]=='year'){
-                    //if year , then 3 more arguments present: 
-                    //1. yearly amount to pay
-                    //2. Total Amount with interest to pay
-                    //3. No. of Years 
+                    
                     var rows = arguments[3]; 
                     var year_pay = arguments[1];
                     var amount_remaining = arguments[2] - year_pay;
@@ -133,10 +127,7 @@
                     document.write('<table>' + table + '</table>');
                 }
                 else{
-                    //reamining one is month , then 3 more arguments present: 
-                    //1. monthly amount to pay
-                    //2. Total Amount with interest to pay
-                    //3. No. of months
+                   
                     var rows = arguments[3]; 
                     var month_pay = arguments[1];
                     var amount_remaining = arguments[2] - month_pay;
